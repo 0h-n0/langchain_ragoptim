@@ -1,0 +1,2 @@
+class BaseTrial:
+    pass

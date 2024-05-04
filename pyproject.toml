@@ -1,0 +1,35 @@
+[project]
+name = "langchain-ragoptim"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "0h-n0", email = "kbu94982@gmail.com" }
+]
+dependencies = [
+    "pydantic>=2.7.1",
+    "optuna>=3.6.1",
+    "langchain>=0.1.17",
+    "polars>=0.20.23",
+]
+readme = "README.md"
+requires-python = ">= 3.11"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "isort>=5.13.2",
+    "black>=24.4.2",
+    "pytest>=8.2.0",
+    "autoflake>=2.3.1",
+    "mypy>=1.10.0",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/langchain_ragoptim"]
